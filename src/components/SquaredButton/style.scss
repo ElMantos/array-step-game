@@ -1,5 +1,5 @@
 .squared_button {
-  @apply w-16 h-16 bg-teal-600 text-2xl text-white border-2 border-teal-200 rounded-lg outline-none;
+  @apply w-12 h-12 bg-teal-600 text-2xl text-white border-2 border-teal-200 rounded-lg outline-none;
   transition: all 0.4s;
   &:active,
   &:focus {

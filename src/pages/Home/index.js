@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-import { SquaredButton, AnimatedTyping } from '~/components';
+import { SquaredButton, AnimatedTyping, SmileyFace } from '~/components';
 import { generateRandomArray } from '~/utils';
 
 import './style.scss';
 
-const AVAILABLE_BUTTON_VALUES = ['0', '1', '2', '3'];
+const AVAILABLE_BUTTON_VALUES = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 
 function Home() {
   const [arrayItems, setArrayItems] = useState([]);
@@ -23,6 +23,7 @@ function Home() {
           text="REMOVE ALL ITEMS"
         />
       </div>
+      <SmileyFace />
       <div className="home_game_elements">
         <div className="home_game_elements_content">[{arrayItems.map((item) => `${item}, `)}</div>
         <div className="home_animaged_typing">
@@ -34,7 +35,11 @@ function Home() {
         <span className="home_controls_label">ADD MORE ITEMS TO THE ARRAY</span>
         <div className="home_button_container">
           {AVAILABLE_BUTTON_VALUES.map((val) => (
-            <SquaredButton text={val} onClick={() => setArrayItems([...arrayItems, val])} />
+            <SquaredButton
+              key={val}
+              text={val}
+              onClick={() => setArrayItems([...arrayItems, val])}
+            />
           ))}
         </div>
       </div>

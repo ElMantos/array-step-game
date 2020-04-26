@@ -3,18 +3,14 @@
 
   .home_game_elements {
     @apply flex items-center mt-auto;
-  }
 
-  .home_game_elements_content {
-    @apply mx-2;
-  }
+    .home_game_elements_content {
+      @apply mx-2;
+    }
 
-  .home_animaged_typing {
-    @apply mt-1 mr-2;
-  }
-
-  .squared_button {
-    @apply mx-2;
+    .home_animaged_typing {
+      @apply mt-1 mr-2;
+    }
   }
 
   .home_controls {
@@ -32,6 +28,15 @@
     }
     .home_button-clear {
       @apply w-64 px-6 text-lg h-10 self-end bg-red-800;
+    }
+  }
+
+  .home_button_container {
+    @apply text-center;
+    width: 12rem;
+
+    .squared_button {
+      @apply mx-2 my-1;
     }
   }
 }
