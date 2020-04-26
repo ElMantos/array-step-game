@@ -13,7 +13,7 @@ module.exports = () => ({
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.s?css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"]
       }
     ]

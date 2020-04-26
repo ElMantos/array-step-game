@@ -21,7 +21,7 @@ module.exports = ({ mode } = { mode: "production" }) => {
       module: {
         rules: [
           {
-            test: /\.jsx?$/,
+            test: /\.js?$/,
             use: ["babel-loader"]
           },
           {
