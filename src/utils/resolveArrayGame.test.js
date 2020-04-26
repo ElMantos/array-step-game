@@ -6,6 +6,6 @@ it('Should pass the game', () => {
 });
 
 it('Should not pass the game', () => {
-  expect(resolveArrayGame([0, 0])).toBe(false);
-  expect(resolveArrayGame([1, 2, 0, 0, 0])).toBe(false);
+  expect(resolveArrayGame([0, 0])).toBeFalsy();
+  expect(resolveArrayGame([1, 2, 0, 0, 0])).toBeFalsy();
 });
