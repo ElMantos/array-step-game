@@ -1,4 +1,4 @@
-const VERSION = 18;
+const VERSION = 19;
 const CACHE_NAME = `app-${VERSION}`;
 const BUILD_FOLDER = "";
 const PRECACHE_MANIFEST = `${BUILD_FOLDER}/resources-manifest.json`;
