@@ -1,18 +1,18 @@
-const path = require("path");
+const path = require('path');
 
 module.exports = () => ({
-  devtool: "source-map",
+  devtool: 'source-map',
   output: {
-    path: path.resolve(__dirname, "../build"),
-    publicPath: "/",
-    filename: "static/js/[name].[hash].js"
+    path: path.resolve(__dirname, '../build'),
+    publicPath: '/',
+    filename: 'static/js/[name].[hash].js',
   },
   module: {
     rules: [
       {
         test: /\.s?css$/,
-        use: ["style-loader", "css-loader"]
-      }
-    ]
-  }
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
+      },
+    ],
+  },
 });
