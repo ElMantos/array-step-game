@@ -1,0 +1,20 @@
+.smiley_face {
+  @apply w-20 h-20 justify-center items-center flex rounded-full relative;
+  transition: 0.5s;
+  .smiley_face_content {
+    @apply text-5xl ml-3;
+    transform: rotate(90deg);
+  }
+
+  &-happy {
+    @apply bg-green-400;
+  }
+
+  &-neutral {
+    @apply bg-gray-400;
+  }
+
+  &-sad {
+    @apply bg-red-600;
+  }
+}

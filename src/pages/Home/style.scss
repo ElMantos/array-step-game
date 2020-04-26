@@ -1,20 +1,66 @@
 .home {
-  @apply h-full flex flex-col justify-center items-center text-3xl;
+  @apply h-full flex flex-col justify-center items-center;
+
+  .removable {
+    @apply relative w-10;
+
+    &.removable-active {
+      @apply text-green-500;
+    }
+
+    .removable_close {
+      @apply absolute bg-red-500 text-black text-xs rounded-full w-5 h-5 flex items-center justify-center;
+      top: 0px;
+      right: 0.5rem;
+      transition: 0.4s;
+      &:focus {
+        @apply outline-none;
+      }
+      &:hover {
+        @apply outline-none shadow-outline;
+      }
+    }
+  }
+
+  .home_thought_buble {
+    @apply w-48 h-24 p-2 border-2 border-gray-600 ml-64 rounded-lg;
+  }
 
   .home_game_elements {
     @apply flex items-center mt-auto;
 
     .home_game_elements_content {
-      @apply mx-2;
+      @apply mx-2 flex items-center;
+      font-size: 2.5rem;
+
+      span {
+        &:first-child {
+          @apply mr-2;
+        }
+
+        &:last-child {
+          @apply ml-2;
+        }
+      }
     }
 
     .home_animaged_typing {
-      @apply mt-1 mr-2;
+      @apply mt-2;
+    }
+  }
+
+  .home_game_tip {
+    @apply opacity-0 text-xs;
+
+    transition: all 0.4s;
+
+    &.home_game_tip-active {
+      @apply opacity-100;
     }
   }
 
   .home_controls {
-    @apply flex flex-col items-center mt-auto mb-32;
+    @apply flex flex-col items-center mt-auto mb-20;
 
     .home_controls_label {
       @apply text-lg text-center;

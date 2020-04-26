@@ -1,6 +1,6 @@
 const resolveArrayGame = (numbers, startIndex = 0, currentJumps = []) => {
   if (startIndex === numbers.length - 1) {
-    return true;
+    return [0, ...currentJumps];
   }
 
   const maxJumpLength = Math.min(numbers[startIndex], numbers.length - 1 - startIndex);
@@ -12,7 +12,7 @@ const resolveArrayGame = (numbers, startIndex = 0, currentJumps = []) => {
     const isJumpSuccessful = resolveArrayGame(numbers, nextIndex, currentJumps);
 
     if (isJumpSuccessful) {
-      return true;
+      return [0, ...currentJumps];
     }
 
     currentJumps.pop();
