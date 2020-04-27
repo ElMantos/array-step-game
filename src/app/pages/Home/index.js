@@ -34,7 +34,7 @@ function Home() {
 
           return resolvedItems
             ? 'I know how you can win the game!'
-            : "I'm sorry, but I cant win it.";
+            : "I'm sorry, but I can't win it.";
         })()}
       </div>
 
