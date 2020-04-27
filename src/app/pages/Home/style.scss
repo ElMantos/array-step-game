@@ -1,27 +1,6 @@
 .home {
   @apply h-full flex flex-col justify-center items-center;
 
-  .removable {
-    @apply relative w-10;
-
-    &.removable-active {
-      @apply text-green-500;
-    }
-
-    .removable_close {
-      @apply absolute bg-red-500 text-black text-xs rounded-full w-5 h-5 flex items-center justify-center;
-      top: 0px;
-      right: 0.5rem;
-      transition: 0.4s;
-      &:focus {
-        @apply outline-none;
-      }
-      &:hover {
-        @apply outline-none shadow-outline;
-      }
-    }
-  }
-
   .home_thought_buble {
     @apply w-48 h-24 p-2 border-2 border-gray-600 ml-64 rounded-lg;
   }
@@ -67,17 +46,19 @@
     }
   }
 
-  .home_top {
+  .home_header {
     @apply w-full mt-12 px-12;
-    .home_button-generate {
-      @apply w-64 px-6 text-lg h-10 self-end;
+
+    .btn-home {
+      @apply w-64 px-6 text-lg h-10;
     }
-    .home_button-clear {
-      @apply w-64 px-6 text-lg h-10 self-end bg-red-800;
+
+    .btn-clear {
+      @apply bg-red-800;
     }
   }
 
-  .home_button_container {
+  .home_keyboard {
     @apply text-center;
     width: 12rem;
 

@@ -8,7 +8,7 @@ const testCases = [
 ];
 
 test.each(testCases)(
-  'Should generate array of given legth with given maximum value',
+  'Should generate array of given length with given maximum value',
   (length, max) => {
     const array = generateRandomArray(length, max);
     expect(array.length).toBe(length);

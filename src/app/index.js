@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Home } from './pages';
 
-import './style.css';
+import './style.scss';
 
 function App() {
   return (

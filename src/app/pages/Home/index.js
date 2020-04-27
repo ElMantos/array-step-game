@@ -1,30 +1,12 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import { SquaredButton, AnimatedTyping, SmileyFace } from '~/components';
+import { SquaredButton, AnimatedTyping, SmileyFace, RemovableItem } from '~/app/components';
 import { generateRandomArray, resolveArrayGame } from '~/utils';
 
 import './style.scss';
 
 const AVAILABLE_BUTTON_VALUES = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
-
-function RemovableItem({ text, onClick, isActive }) {
-  return (
-    <span className={cx('removable', isActive && 'removable-active')}>
-      {text}
-      <button onClick={onClick} type="button" className="removable_close">
-        ×
-      </button>
-    </span>
-  );
-}
-
-RemovableItem.propTypes = {
-  text: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
-  isActive: PropTypes.bool.isRequired,
-};
 
 function Home() {
   const [arrayItems, setArrayItems] = useState([]);
@@ -32,14 +14,14 @@ function Home() {
   const resolvedItems = resolveArrayGame(arrayItems);
   return (
     <div className="home">
-      <div className="home_top">
+      <div className="home_header">
         <SquaredButton
-          className="home_button-generate sm:float-left"
+          className="btn-home sm:float-left"
           onClick={() => setArrayItems(generateRandomArray(10, 3))}
           text="GENERATE NEW ITEMS"
         />
         <SquaredButton
-          className="home_button-clear sm:float-right"
+          className="btn-home btn-clear sm:float-right"
           onClick={() => setArrayItems([])}
           text="REMOVE ALL ITEMS"
         />
@@ -88,7 +70,7 @@ function Home() {
       </span>
       <div className="home_controls">
         <span className="home_controls_label">ADD MORE ITEMS TO THE ARRAY</span>
-        <div className="home_button_container">
+        <div className="home_keyboard">
           {AVAILABLE_BUTTON_VALUES.map((val) => (
             <SquaredButton
               key={val}

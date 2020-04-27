@@ -1,0 +1,20 @@
+.removable {
+  @apply relative w-10;
+
+  &.removable-active {
+    @apply text-green-500;
+  }
+
+  .removable_close {
+    @apply absolute bg-red-500 text-black text-xs rounded-full w-5 h-5 flex items-center justify-center;
+    top: 0px;
+    right: 0.5rem;
+    transition: 0.4s;
+    &:focus {
+      @apply outline-none;
+    }
+    &:hover {
+      @apply outline-none shadow-outline;
+    }
+  }
+}
