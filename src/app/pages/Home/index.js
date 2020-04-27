@@ -16,12 +16,12 @@ function Home() {
     <div className="home">
       <div className="home_header">
         <SquaredButton
-          className="btn-home sm:float-left"
+          className="btn-home btn-generate"
           onClick={() => setArrayItems(generateRandomArray(10, 3))}
           text="GENERATE NEW ITEMS"
         />
         <SquaredButton
-          className="btn-home btn-clear sm:float-right"
+          className="btn-home btn-clear"
           onClick={() => setArrayItems([])}
           text="REMOVE ALL ITEMS"
         />

@@ -1,5 +1,5 @@
 .smiley_face {
-  @apply w-20 h-20 justify-center items-center flex rounded-full relative;
+  @apply w-20 h-20 my-2 justify-center items-center flex rounded-full relative;
   transition: 0.5s;
   .smiley_face_content {
     @apply text-5xl ml-3;

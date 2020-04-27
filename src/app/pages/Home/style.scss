@@ -2,14 +2,20 @@
   @apply h-full flex flex-col justify-center items-center;
 
   .home_thought_buble {
-    @apply w-48 h-24 p-2 border-2 border-gray-600 ml-64 rounded-lg;
+    @apply w-48 h-24 p-2 border-2 border-gray-600 ml-0 my-5 rounded-lg;
+
+    @screen md {
+      @apply ml-64 !important my-0;
+    }
   }
 
   .home_game_elements {
-    @apply flex items-center mt-auto;
+    @apply flex items-center mt-auto h-12;
+
+    max-width: 90vw;
 
     .home_game_elements_content {
-      @apply mx-2 flex items-center;
+      @apply mx-2 flex items-center overflow-x-auto;
       font-size: 2.5rem;
 
       span {
@@ -47,14 +53,28 @@
   }
 
   .home_header {
-    @apply w-full mt-12 px-12;
+    @apply flex flex-col w-full mt-12 px-12;
+
+    @screen sm {
+      @apply block;
+    }
 
     .btn-home {
-      @apply w-64 px-6 text-lg h-10;
+      @apply w-64 px-6 text-lg h-10 mx-auto;
+    }
+
+    .btn-generate {
+      @screen sm {
+        @apply float-left;
+      }
     }
 
     .btn-clear {
       @apply bg-red-800;
+
+      @screen sm {
+        @apply float-right;
+      }
     }
   }
 
