@@ -59,7 +59,7 @@ function Home() {
               text={`${item}, `}
             />
           ))}
-          <div className="home_animaged_typing">
+          <div className="home_animated_typing">
             <AnimatedTyping />
           </div>
           <span>]</span>
